@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <form>
+        <input type="button" value="Submit" onclick="setQuery()">
+      </form>
+      
+     
+        <!--input type="button" value="Location" onclick="checkLocation()"-->
+        <input type="image" src="navigation.jpg" alt="Navigate" onclick="checkLocation()" width="48" height="48">
+      
+
+    <div class="app wrap">
+        <header>
+            <input type="text" autocomplete="off" class="search-box"
+            placeholder="Search for a location?"
+        </header>
+        <main>
+            <section class="location">
+                <div class="city"> Klang, MY</div>
+                <div class="date"> Friday 28 November 2020</div>
+            </section>
+            <div class="current">
+                <div class="condition">Rainy</div>
+                <div class="temp">27 °C</div>
+            </div>
+        </main>
+
+    </div>
+    <script type="text/javascript"  src="app.js" charset="utf-8" defer></script>
+    <script>
+        function activatePlacesSearch(){
+            var input = document.querySelector('.search-box');
+            var autocomplete = new google.maps.places.Autocomplete(input);
+        }
+    </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVcFY9hxjB63hZ6KYGnpJzvrFxp4RE3E&libraries=places&callback=activatePlacesSearch">
+</script>
+</body>
+</html>
