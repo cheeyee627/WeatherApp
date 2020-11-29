@@ -1,0 +1,60 @@
+body {
+  background-image:url('background/default.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:white;
+  text-shadow: 1px 1px 1px black;
+  font-family: "Georgia","Book Antiqua",Palatino, serif;
+}
+
+#WeatherBoundingBox{
+  background-color: rgba(0,0,0,0.2);
+  box-shadow:5px 5px 5px black;
+  padding: 50px;
+  border-radius: 10px;
+  
+}
+
+.search-box{
+  width: 50%
+}
+
+#SearchBoundingBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+    position:fixed;
+    top:10;
+    left:0;
+    right:0;
+    width:100%
+  }
+  .timelayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:12000;
+    flex-direction:column;
+    text-align:center;
+    
+    
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 15px 15px;
+    flex-direction:column;
+    text-align:center;
+    
+    
+  }
+ 
+
+
+  input{
+    text-align:center;
+  }
