@@ -67,24 +67,25 @@ header{
     flex-direction:column;
     align-items: center;
     text-align:center;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 3px 3px 5px black;
     font-family: "Georgia","Book Antiqua",Palatino, serif;
+    padding: 5px 15px 15px;
+    flex-direction:column;
+    align-items: center;
+    text-align:center;
+    color: white;
   }
 
  #temp{
    color:white;
    font-size: clamp(1rem, 12vw, 5rem);
    font-weight: 900;
-   text-shadow: 8px 8px rgba(0,0,0,1)
+   text-shadow: 4px 4px rgba(0,0,0,1)
  }
  #condition{
    font-size: clamp(1.2rem, 3vw, 1.5rem);
  }
-  #weather-icon{
-    max-width: 100%;
-    height: auto;  
-  
-  }
+
   input{
     text-align:center;
   }
@@ -97,10 +98,11 @@ header{
     background-color: rgba(255,255,255,0.4);
     border-radius: 50px;
     padding: 5px 15px 15px;
+    margin-top: 50px;
     font-size: clamp(1rem, 100%, 2rem);
     font-weight: 900;
     color: black;
-    text-shadow: 3px 3px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px rgba(0,0,0,0.2);
     flex-direction:column;
     align-items: center;
     text-align:center;
