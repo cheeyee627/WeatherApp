@@ -1,10 +1,8 @@
-body {
-  background-image:url('background/default.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  color:white;
-  font-family: "montseratt", sans-serif; 
-  transition: background-image 1s ease-in-out;
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+      width: 100%;
+  }
 }
 
 header{
