@@ -2,22 +2,42 @@ body {
   background-image:url('background/default.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   color:white;
-  text-shadow: 1px 1px 1px black;
-  font-family: "Georgia","Book Antiqua",Palatino, serif;
+  font-family: "montseratt", sans-serif; 
+  transition: background-image 1s ease-in-out;
 }
 
-#WeatherBoundingBox{
-  background-color: rgba(0,0,0,0.2);
-  box-shadow:5px 5px 5px black;
-  padding: 50px;
-  border-radius: 10px;
-  
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px 15px;
 }
 
 .search-box{
-  width: 50%
+  outline:none;
+  border:none;
+  background-color:rgba(255,255,255,0.2);
+  width: 50%; 
+  height: 70px;
+  overflow: hidden;
+  border-radius: 30px;
+  text-shadow: 1px 1px 1px black;
+  font-size: 28px;
+  font-weight: 30;
+  transition: 0.4s ease-out;
+  font-family: "Georgia","Book Antiqua",Palatino, serif;
+}
+
+::placeholder{
+  color:black
+}
+
+
+#userInputtxt:hover, #userInputtxt:focus{ 
+  border: none;
+    background-color: rgba(255,255,255,0.5);
+    
 }
 
 #SearchBoundingBox {
@@ -31,30 +51,44 @@ body {
     right:0;
     width:100%
   }
-  .timelayout {
+
+  #time {
     display: flex;
     justify-content: center;
-    align-items: center;
-    top:12000;
+    padding: 50px 10px 40px;
+    font-size: 30px;
+    font-weight: 900;
     flex-direction:column;
+    align-items: center;
     text-align:center;
-    
-    
   }
 
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 150px 15px 15px;
-    flex-direction:column;
-    text-align:center;
-    
-    
-  }
- 
-
+ #temp{
+   color:white;
+   font-size: 62px;
+   font-weight: 900;
+   margin: 10px 0px;
+   text-shadow: 8px 8px rgba(0,0,0,0.5)
+ }
 
   input{
     text-align:center;
+  }
+  
+  
+  #TempDescrip{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50px;
+    padding: 10px 15px 15px;
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    flex-direction:column;
+    align-items: center;
+    text-align:center;
+    width: 300px;
+    box-shadow: 5px 5px 5px black;   
   }

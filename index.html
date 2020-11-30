@@ -9,40 +9,41 @@
 </head>
 
 <body>
-        <!--input type="button" value="Location" onclick="checkLocation()"-->  
-    <header>
-        <div id="SearchBoundingBox">
-            <input class="search-box" id="userInputtxt" type="text" placeholder="Search for a city..." >
-            <title>Google Icons</title>
-            <i class="material-icons" onclick="checkLocation()" style="font-size:48px">place</i>
-            <input type="button" value="Go!" onclick="execute()">
-        </div> 
-    </header>
-    <main id="mainBox">
-        <div id="WeatherBoundingBox">
-            <section class="GenericInfo">
-                <div id="time"></div>
-                <div id="date"></div>
-                <div id="city"></div>              
-                <div class="weather-icon">
-                    <img src="icons/unknown.png" alt="">
-                </div>
-            </section>
-            <section class="TempDescrip">
-                <div id="condition"></div>
-                <div id="temp"></div>
-            </section>
+        <header>
+            <div id="SearchBoundingBox">
+                <input class="search-box" id="userInputtxt" type="search" placeholder="Search for a city..." onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Search for a city...'" />
+                <title>Google Icons</title>
+                <i class="material-icons" onclick="checkLocation()" style="font-size:48px">place</i>
+                
+            </div> 
+        </header>
+        <div id="weatherBoundingBox">
+                <section class="GenericInfo">
+                    <div id="time"></div>
+                    <!--div id="city"></div-->              
+                </section>
+            </div>
+        <div id="TempDescrip">
+            <div class="weather-icon">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div id="condition"></div>
+            <div id="temp"></div>
         </div>
-    </main>
+    </div> 
         <script>
             function activatePlacesSearch(){
                 var input = document.querySelector('.search-box');
                 var autocomplete = new google.maps.places.Autocomplete(input);
             }
+     
         </script>
         <script type="text/javascript"  src="app.js" charset="utf-8" defer></script>
+        
         <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVcFY9hxjB63hZ6KYGnpJzvrFxp4RE3E&libraries=places&callback=activatePlacesSearch">
-        </script>
+        </script>       
 </body>
+
 </html>
