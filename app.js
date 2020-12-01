@@ -4,7 +4,7 @@ let api={
     units:'metric'
 }
 let searchmethod='q'
-adjustMain();
+
 
 const weather = {}
 const searchbox=document.getElementById('userInputtxt');
@@ -94,36 +94,44 @@ function getResults(query){
 function extractResults(jsonResult){
     console.log(jsonResult)
     if (jsonResult.hasOwnProperty('message')){
-        alert("Cannot find location! Retry by typing in format of 'city','country code'. e.g., 'Melbourne, AU' ")
+        alert("Cannot find location! Retry by typing in format of 'city','country code'. e.g., 'Melbourne, AU'")
     }
     weather.temperature.value = Math.round(jsonResult.main.temp);
     weather.condition = jsonResult.weather[0].description;
     weather.iconId = jsonResult.weather[0].icon;
     weather.city = jsonResult.name;
     weather.country = jsonResult.sys.country;
-    weather.background = jsonResult.weather[0].main
-    weather.currentTime=jsonResult.dt
-    weather.currentTimeZone=jsonResult.timezone
+    weather.background = jsonResult.weather[0].main;
+    weather.currentTime=jsonResult.dt;
+    weather.currentTimeZone=jsonResult.timezone;
 }
 
 function switchBackground (){
     switch(weather.background){
         case 'Clear':
             document.body.style.backgroundImage = 'url("background/clear.jpg")';
+            adjustMain();
             break;
         case 'Clouds':
             document.body.style.backgroundImage = "url('background/cloudy.jpg')";
+            adjustMain();
             break;
         case 'Rain':
         case 'Drizzle':
+            document.body.style.backgroundImage = 'url("background/rain.jpg")';
+            adjustMain();
+            break;
         case 'Mist':
-        document.body.style.backgroundImage = 'url("background/rain.jpg")';
+            document.body.style.backgroundImage = 'url("background/mist.jpg")';
+            adjustMain();
             break;
         case 'Snow':
             document.body.style.backgroundImage = 'url("background/snow.jpg")';
+            adjustMain();
             break;
         case 'Thunderstorm':
         document.body.style.backgroundImage = 'url("background/storm.jpg")';
+        adjustMain();
             break;   
         default:
             break;
@@ -138,9 +146,9 @@ function adjustMain() {
  
     main_border.style.left= "calc(50% - " + (main_border_width/2).toString() + "px)";  
     main_border.style.top= "calc(50% - " + (main_border_height/1.3).toString() + "px)"
-    main_border.style.visibility="visible";
-    
+    main_border.style.visibility="visible"; 
 }
+
    
 const iconElement = document.querySelector(".weather-icon");
 //const city = document.getElementById('city');
@@ -191,12 +199,12 @@ var temp = seconds.toString();
     }
 // Will display time in 10:30:23 format
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    let days = ["Sun","Mon","Tues","Wed","Thurs","Fri","Sat"];
 
     let day = days[time_current.getDay()];
     let date= time_current.getDate()
     let month = months[time_current.getMonth()];
     let year=time_current.getFullYear();
-return `${day}, ${date} ${month} ${year}` +', '  + hours + ':' + minutes + ':'+ seconds
+return `${day}, ${month} ${date} , ${year}` +', '  + hours + ':' + minutes + ':'+ seconds
 
 }

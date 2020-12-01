@@ -1,114 +1,124 @@
+/* Main Body */
 body{
   background:url('background/default.jpg') no-repeat center center fixed ; 
-  /*background-size:100%;*/
   -webkit-background-size: cover;
-  -moz-background-size: cover;
+  -moz-background-size: cover;  
   -o-background-size: cover;
   background-size: cover;
   width: auto ;
   max-width: 100% ;
   height: auto ;
-  /*transition: 1s ease-out;    */
+  /*transition: 1s ease-out;    not appicable for mobile, only works on laptop*/
   }
 
+/* -----------------header: includes search box and navigator icon------------------*/
 header{
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2vw 20px 15px;
-}
-
-.search-box{
-  outline:none;
-  border:none;
-  background-color:rgba(255,255,255,0.2);
-  width: clamp(1rem, 100vw, 50rem);
-  height: 70px;
-  overflow: hidden;
-  border-radius: 30px;
-  text-shadow: 1px 1px 1px black;
-  font-size: clamp(1rem, 4vw, 2rem);
-  font-weight: 30;
-  transition: 0.2s ease-out;
-  font-family: "Georgia","Book Antiqua",Palatino, serif;
+  }
   
-}
-
-::placeholder{
-  color:black
-}
-
-.weather-icon{
-  max-width: 100%;
-  height: auto;
-}
-#userInputtxt:hover, #userInputtxt:focus{ 
-  border: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    
-}
-
-#SearchBoundingBox {
+  #SearchBoundingBox {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1vw 15px 10px;
-    top:10;
-    left:0;
-    right:0;
     width:100%
-  }
+    }
 
-  #time {
-    display: flex;
-    justify-content: center;
-    padding: 1vw 10px 40px;
-    font-size: clamp(1rem, 5vw, 2rem);
-    font-weight: 900;
-    flex-direction:column;
-    align-items: center;
-    text-align:center;
-    text-shadow: 3px 3px 5px black;
+  .search-box{
+    outline:none;
+    border:none;
+    background-color:rgba(255,255,255,0.2);
+    width: clamp(1rem, 100vw, 50rem);
+    height: 70px;
+    overflow: auto;
+    border-radius: 30px;
+    text-shadow: 1px 1px 1px black;
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-weight: 30;
+    transition: 0.2s ease-out;
     font-family: "Georgia","Book Antiqua",Palatino, serif;
-    padding: 5px 15px 15px;
-    flex-direction:column;
-    align-items: center;
-    text-align:center;
-    color: white;
-  }
-
- #temp{
-   color:white;
-   font-size: clamp(1rem, 12vw, 5rem);
-   font-weight: 900;
-   text-shadow: 4px 4px rgba(0,0,0,1)
- }
- #condition{
-   font-size: clamp(1.2rem, 3vw, 1.5rem);
- }
+    }
 
   input{
     text-align:center;
+    }
+
+  #userInputtxt:hover, #userInputtxt:focus{ 
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5); 
+    }
+
+  ::placeholder{
+    color:black
+    }
+
+/* -----------------div weather bounding box :includes time (and city)-----------------*/
+#time {
+  display: flex;
+  justify-content: center;
+  padding: 1vw 10px 40px;
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-weight: 900;
+  flex-direction:column;
+  align-items: center;
+  text-align:center;
+  text-shadow: 3px 3px 5px black;
+  font-family: "Georgia","Book Antiqua",Palatino, serif;
+  padding: 5px 15px 15px;
+  flex-direction:column;
+  align-items: center;
+  text-align:center;
+  color: white;
   }
+
+ /* -----------------div tempDescrip  :includes Temp, condition, weather icon -----------------*/ 
+#TempDescrip{
+  position: relative;
+  display: flex;
+  font-family: Gill Sans, sans-serif;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 50px;
+  padding: 5px 15px 15px;
+  margin-top: 50px;
+  font-size: clamp(1rem, 100%, 2rem);
+  font-weight: 900;
+  color: black;
+  text-shadow: 1px 1px rgba(0,0,0,0.2);
+  flex-direction:column;
+  align-items: center;
+  text-align:center;
+  width: 300px;
+  box-shadow: 5px 5px 5px black;   
+  visibility: hidden;
   
-  #TempDescrip{
-    position: relative;
-    display: flex;
-    font-family: Gill Sans, sans-serif;
-    justify-content: center;
-    background-color: rgba(255,255,255,0.4);
-    border-radius: 50px;
-    padding: 5px 15px 15px;
-    margin-top: 50px;
-    font-size: clamp(1rem, 100%, 2rem);
-    font-weight: 900;
-    color: black;
-    text-shadow: 1px 1px rgba(0,0,0,0.2);
-    flex-direction:column;
-    align-items: center;
-    text-align:center;
-    width: 300px;
-    box-shadow: 5px 5px 5px black;   
-    visibility: hidden;
+}
+
+  hr.horizontal{
+    border: solid thin rgba(0,0,0,0.7);
+    border-radius: 2px; 
+    width:70%;
   }
+
+  #temp{
+    color:white;
+    font-size: clamp(1rem, 12vw, 5rem);
+    font-weight: 900;
+    text-shadow: 4px 4px rgba(0,0,0,1)
+    }
+
+  .weather-icon{
+    max-width: 100%;
+    height: auto;
+    }
+
+  #condition{
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 1vw;
+    }
+
+  
   

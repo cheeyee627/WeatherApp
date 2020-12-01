@@ -13,34 +13,35 @@
             <div id="SearchBoundingBox">
                 <input class="search-box" id="userInputtxt" type="search" placeholder="Search for a city..." onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Search for a city...'" />
-                <title>Google Icons</title>
                 <i class="material-icons" onclick="checkLocation()" style="font-size:48px">place</i>
-                
             </div> 
         </header>
+        
         <div id="weatherBoundingBox">
                 <section class="GenericInfo">
                     <div id="time"></div>
-                    <!--div id="city"></div-->              
+                    <!--div id="city"></div-->
+                    <!--replacing searched location with location found in OpenWeatherMap db-->                
                 </section>
-            </div>
+        </div>
+        
         <div id="TempDescrip">
             <div class="weather-icon">
-                <img id="icons/unknown.png" alt="">
+                <img id="icons/unknown.png" alt="">   
             </div>
             <div id="condition"></div>
+                <hr class="horizontal" >
             <div id="temp"></div>
         </div>
-    </div> 
+
+        <!--Script for autocomplete, app.js google map api -->
+        <script type="text/javascript"  src="app.js" charset="utf-8" defer></script>
         <script>
             function activatePlacesSearch(){
                 var input = document.querySelector('.search-box');
                 var autocomplete = new google.maps.places.Autocomplete(input);
             }
-     
         </script>
-        <script type="text/javascript"  src="app.js" charset="utf-8" defer></script>
-        
         <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWVcFY9hxjB63hZ6KYGnpJzvrFxp4RE3E&libraries=places&callback=activatePlacesSearch">
         </script>       
