@@ -108,7 +108,7 @@ function extractResults(jsonResult){
 }
 
 // switching background images based on weather condition and Day/Night
-// Total of 13 different background images available
+// Total of 14 different background images available
 function switchBackground (){
     switch(weather.background){
         case 'Clear':
@@ -139,7 +139,13 @@ function switchBackground (){
                }
             adjustMain();
             break;
-        case 'Mist':
+        case 'Mist': 
+        case 'Smoke':  
+        case 'Haze':  
+        case 'Fog':  
+        case 'Dustt':  
+        case 'Sand':  
+        case 'Ash':  
             if (weather.iconId.includes("n")){
                 document.body.style.backgroundImage = 'url("background/mist-night.jpg")'
                }
@@ -165,7 +171,12 @@ function switchBackground (){
                 document.body.style.backgroundImage = 'url("background/storm.jpg")';
                }
             adjustMain();
-            break;   
+            break;
+        case 'Squall':  
+        case 'Tornado':
+                document.body.style.backgroundImage = 'url("background/tornado.jpg")';
+            adjustMain();
+            break;        
         default:
             break;
     }
