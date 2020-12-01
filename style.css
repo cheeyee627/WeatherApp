@@ -11,37 +11,6 @@ body{
   transition: 1s ease-out;    
   }
 
-  /* #### Mobile Phones Portrait #### */
-@media screen and (max-device-width: 480px) and (orientation: portrait){
-  body{
-    background:url('background/default.jpg') no-repeat center center fixed ; 
-    /*background-size:100%;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: auto ;
-    max-width: 100% ;
-    height: auto ;
-  }
-}
-
-/* #### Mobile Phones Landscape #### */
-@media screen and (max-device-width: 640px) and (orientation: landscape){
-  body{
-    background:url('background/default.jpg') no-repeat center center fixed ; 
-    /*background-size:100%;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: auto ;
-    max-width: 100% ;
-    height: auto ;
-  }
-}
-
-
 header{
   display: flex;
   justify-content: center;
