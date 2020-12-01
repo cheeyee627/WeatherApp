@@ -110,20 +110,25 @@ function switchBackground (){
     switch(weather.background){
         case 'Clear':
             document.body.style.backgroundImage = 'url("background/clear.jpg")';
+            document.body.style.transition = '1.5s ease-out';
             break;
         case 'Clouds':
             document.body.style.backgroundImage = "url('background/cloudy.jpg')";
+            document.body.style.transition = '1.5s ease-out';
             break;
         case 'Rain':
         case 'Drizzle':
         case 'Mist':
         document.body.style.backgroundImage = 'url("background/rain.jpg")';
+        document.body.style.transition = '1.5s ease-out';
             break;
         case 'Snow':
             document.body.style.backgroundImage = 'url("background/snow.jpg")';
+            document.body.style.transition = '1.5s ease-out';
             break;
         case 'Thunderstorm':
         document.body.style.backgroundImage = 'url("background/storm.jpg")';
+        document.body.style.transition = '1.5s ease-out';
             break;   
         default:
             break;
