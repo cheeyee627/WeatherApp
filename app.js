@@ -85,6 +85,7 @@ function getResults(query){
     .then(function(){
         switchBackground();
     })
+    
     .then(function(){
         displayResults();
     })
@@ -109,29 +110,59 @@ function extractResults(jsonResult){
 function switchBackground (){
     switch(weather.background){
         case 'Clear':
-            document.body.style.backgroundImage = 'url("background/clear.jpg")';
-            adjustMain();
+            if (weather.iconId.includes("n")){
+                document.body.style.backgroundImage = 'url("background/clear-night.jpg")'
+               }
+               else{
+                document.body.style.backgroundImage = 'url("background/clear.jpg")';
+               }
+               adjustMain();
             break;
         case 'Clouds':
-            document.body.style.backgroundImage = "url('background/cloudy.jpg')";
+            if (weather.iconId.includes("n")){
+                document.body.style.backgroundImage = 'url("background/cloudy-night.jpg")'
+               }
+               else{
+                document.body.style.backgroundImage = "url('background/cloudy.jpg')";
+               }
             adjustMain();
             break;
         case 'Rain':
         case 'Drizzle':
-            document.body.style.backgroundImage = 'url("background/rain.jpg")';
+            if (weather.iconId.includes("n")){
+                document.body.style.backgroundImage = 'url("background/rain-night.jpg")'
+               }
+               else{
+                document.body.style.backgroundImage = 'url("background/rain.jpg")';
+               }
             adjustMain();
             break;
         case 'Mist':
-            document.body.style.backgroundImage = 'url("background/mist.jpg")';
+            if (weather.iconId.includes("n")){
+                document.body.style.backgroundImage = 'url("background/mist-night.jpg")'
+               }
+               else{
+                document.body.style.backgroundImage = 'url("background/mist.jpg")';
+               }
             adjustMain();
             break;
         case 'Snow':
-            document.body.style.backgroundImage = 'url("background/snow.jpg")';
+            if (weather.iconId.includes("n")){
+                document.body.style.backgroundImage = 'url("background/snow-night.jpg")'
+               }
+               else{
+                document.body.style.backgroundImage = 'url("background/snow.jpg")';
+               }
             adjustMain();
             break;
         case 'Thunderstorm':
-        document.body.style.backgroundImage = 'url("background/storm.jpg")';
-        adjustMain();
+            if (weather.iconId.includes("n")){
+                document.body.style.backgroundImage = 'url("background/storm-night.jpg")'
+               }
+               else{
+                document.body.style.backgroundImage = 'url("background/storm.jpg")';
+               }
+            adjustMain();
             break;   
         default:
             break;
