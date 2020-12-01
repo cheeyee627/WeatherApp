@@ -94,7 +94,7 @@ function getResults(query){
 function extractResults(jsonResult){
     console.log(jsonResult)
     if (jsonResult.hasOwnProperty('message')){
-        alert("Cannot find location! Retry by typing in the format of 'city','country code'. e.g. Melbourne, AU")
+        alert("Cannot find location! Retry by typing in format of 'city','country code'. e.g., 'Melbourne, AU' ")
     }
     weather.temperature.value = Math.round(jsonResult.main.temp);
     weather.condition = jsonResult.weather[0].description;
