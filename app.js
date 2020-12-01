@@ -92,7 +92,7 @@ function getResults(query){
 function extractResults(jsonResult){ 
     console.log(jsonResult) // check point
     if (jsonResult.hasOwnProperty('message')){
-        alert("Cannot find location! Retry by typing in format of 'city','country code'. e.g., 'Melbourne, AU'")
+        alert("Cannot find location! Retry by typing in the format of 'city','country code'. e.g., 'Melbourne, AU'")
         } // using the fact that invalid location error has key value pairs of 'message', display error to assist
           // user to retype the location
 
