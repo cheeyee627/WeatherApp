@@ -1,5 +1,4 @@
 // app.js created by OON CHEE YEE
-// XiMnet Malaysia Interview Project Tryout
 // Based on Vanilla JavaScript **
 // last updated: 1/12/2020
 
@@ -7,7 +6,7 @@
 // Declaration and initialisation of api keys variable to access and store weather conditions
 //-------------------------------------------------------------------------------------------//
 let api={
-    key: "5e34ecbdf07e9639daa204998e8deb07",
+    key: "",
     base:"https://api.openweathermap.org/data/2.5/",
     units:'metric'
     }
